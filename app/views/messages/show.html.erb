@@ -1,0 +1,28 @@
+<p>
+  <b>Body:</b>
+  <%=h @message.body %>
+</p>
+
+<p>
+  <b>Scheduled at:</b>
+  <%=h @message.scheduled_at %>
+</p>
+
+<p>
+  <b>Timezone:</b>
+  <%=h @message.timezone %>
+</p>
+
+<p>
+  <b>Facebook:</b>
+  <%=h @message.facebook_id %>
+</p>
+
+<p>
+  <b>Delivered at:</b>
+  <%=h @message.delivered_at %>
+</p>
+
+
+<%= link_to 'Edit', edit_message_path(@message) %> |
+<%= link_to 'Back', messages_path %>

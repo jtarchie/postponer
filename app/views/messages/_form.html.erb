@@ -1,0 +1,24 @@
+<script>
+    $(document).ready(function() {
+        updatePageOptions($('#message_facebook_id'), <%=@user.facebook_id.to_json%>) ;
+    });
+</script>
+
+<%= f.error_messages %>
+
+<p>
+  <%= f.label :body %>
+  <%= f.text_area :body %>
+</p>
+<p>
+  <%= f.label :scheduled_at, "" %>
+  <%= f.datetime_select(:scheduled_at, :start_year=>Time.now.year) %>
+</p>
+<p>
+  <%= f.label :timezone %>
+  <%= f.time_zone_select(:timezone, ActiveSupport::TimeZone.us_zones, :default => "Pacific Time (US & Canada)") %>
+</p>
+<p>
+  <%= f.label :facebook_id, "Facebook Page" %>
+  <%= f.select :facebook_id, [['You', @user.facebook_id]] %>
+</p>

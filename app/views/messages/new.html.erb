@@ -1,0 +1,8 @@
+<h1>New message</h1>
+
+<% remote_form_for(@message) do |f| %>
+  <%= render :partial=>'form', :locals=>{:f=>f}%>
+  <p>
+    <%= f.submit 'Create' %> or <%=link_to "Cancel", {:action=>:index}, :class=>'close_lightbox'%>
+  </p>
+<% end %>

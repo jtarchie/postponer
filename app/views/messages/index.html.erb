@@ -1,0 +1,15 @@
+<h1>Scheduled messages</h1>
+
+<div id="messages_display">
+<% unless @messages.blank?%>
+    <% @messages.each do |message| %>
+        <%= render(:partial=>'show', :locals=>{:message=>message}) %>
+    <% end %>
+<% else %>
+    <p id="messages_empty">You have no scheduled messages waiting to be posted to facebook.</p>
+<% end %>
+</div>
+
+<br />
+
+<%= link_to 'New message', new_message_path, :class=>'lightbox' %>

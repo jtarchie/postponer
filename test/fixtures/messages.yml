@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  body: MyText
+  scheduled_at: 2010-01-18 21:52:07
+  timezone: MyString
+  facebook_id: 1
+  delivered_at: 2010-01-18 21:52:07
+
+two:
+  body: MyText
+  scheduled_at: 2010-01-18 21:52:07
+  timezone: MyString
+  facebook_id: 1
+  delivered_at: 2010-01-18 21:52:07

@@ -1,0 +1,28 @@
+<div class="preview-message" id="preview-message-<%=message.id%>">
+    <div class="pic">
+        <fb:profile-pic uid="<%=message.facebook_id%>" size="square"></fb:profile-pic>
+    </div>
+    <div class="content">
+        <div class="delete">
+            <%= link_to_remote "Delete", 
+                :url => {:action=>:destroy, :id=>message.id},
+                :method => :delete,
+                :confirm => 'Are you sure?',
+                :complete=>"$('#preview-message-#{message.id}').effect('blind');"%>
+        </div>
+        <span class="name">
+            <fb:name uid="<%=message.facebook_id%>" useyou="false" ifcantsee="Facebook User"></fb:name>
+        </span>
+        <span class="body">
+            <%=h(message.body)%>
+        </span>
+    </div>
+    <div class="options">
+        <span class="scheduled">
+            <%=facebook_time_format(message.scheduled_at, Time.now, true)%>
+        </span>
+        ·
+        <%=link_to "Edit", {:action=>:edit, :id=>message.id}, :class=>'lightbox'%>
+    </div>
+</div>
+    

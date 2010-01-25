@@ -1,0 +1,8 @@
+if @message.errors.empty?
+  page.hide 'messages_empty'
+  page.insert_html :top, 'messages_display', :partial => 'show', :locals=>{:message=>@message}
+  page << "FB.XFBML.Host.parseDomElement(document.getElementById('preview-message-#{@message.id}'))"
+  page << 'closeLightbox();'
+else
+  page.replace_html "fancy_ajax", :file=>"messages/new.html.erb"
+end

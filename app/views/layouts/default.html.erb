@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml"> 
+<head>
+	<%= google_jquery(:version => '1.4.0') %>
+	<%= google_jqueryui(:version => '1.7.2') %>
+	<%= stylesheet_link_tag("application","/javascripts/fancybox/jquery.fancybox-1.2.6.css")%>
+	<%= javascript_include_tag("application", "jrails", "fancybox/jquery.fancybox-1.2.6.pack.js") %>
+</head>
+<body>
+	<%= fb_connect_javascript_tag() %>
+	<div id="window">
+        <div id="header">
+            <div id="header_content">
+                <div class="title">post<span class="grey">poner</span></div>
+                <div class="slogan">just let us post it later</div>
+            </div>
+        </div>
+        <div id="content">
+	        <%= yield %>
+	    </div>
+	</div>
+	<%= init_fb_connect(:app_settings=>'{"doNotUseCachedConnectState":true }') %>
+</body>
+</html>

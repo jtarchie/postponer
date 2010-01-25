@@ -1,0 +1,153 @@
+.grey {
+	color: rgb(36, 92, 109);
+}
+body {
+	margin: 0;
+	padding: 0;
+	background-color: rgb(246, 255, 244);
+	font-size: 13px;
+	font-family: Arial,
+	             Helvetica,
+	             sans-serif;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif;
+}
+
+/* form elements */
+form {
+	margin:10px 15px; padding: 5px;
+	border: 1px solid #E8E8E8; 
+	background-color: #F9F9F9; 
+}
+label {
+	display:block;
+	font-weight:bold;
+	margin:5px 0;
+}
+input {
+	padding: 2px;
+	border:1px solid #eee;
+}
+textarea {
+	width:400px;
+	padding:2px;
+	border:1px solid #eee;
+	height:100px;
+}
+input[type="submit"] { 
+	margin: 0; 
+	background: #FFF repeat-x; 
+	padding: 2px 3px; 
+	color: #333;
+	border: 1px solid #DADADA;	
+}
+
+#header {
+	background-color: rgb(6, 21, 33);
+	border-bottom: 3px solid rgb(161, 218, 252);
+	height: 75px;
+}
+
+#header_content {
+	width: 700px;
+	margin: 0 auto;
+	position: relative;
+	color: #fff;
+	font-family: Georgia, "New Century Schoolbook", "Nimbus Roman No9 L", serif;
+}
+
+#header_content .title{
+	margin: 0;
+	position: absolute;
+	font-size: 45px;
+	top: 0;
+	left: 0;
+}
+
+#header_content .slogan{
+	margin: 0;
+	position: absolute;
+	top: 47px;
+	left: 75px;
+}
+
+#content {
+	width: 700px;
+	margin: 0 auto;
+}
+
+
+/* facebook preview of a message */
+.preview-message {
+	display: block;
+	width: 480px;
+	margin-bottom: 7px;
+	min-height: 50px;
+	padding: 7px 0 0 60px;
+	border-top:1px solid #EEEEEE;
+	position: relative;
+	font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+}
+.preview-message a {
+	text-decoration:none;
+}
+.preview-message a:hover {
+	text-decoration:underline;
+}
+.preview-message .pic {
+	left: 0;
+	position:absolute;
+}
+.preview-message .delete {
+	float: right;
+	margin-top: -2px;
+}
+.preview-message .delete a{
+	visibility:hidden;
+	color:#333333;
+	font-size:11px;
+	font-weight:bold;
+	line-height:14px;
+}
+.preview-message:hover .delete a {
+	visibility: visible;
+	border: 1px solid transparent;
+	padding:3px 6px;
+	text-decoration: none;
+}
+.preview-message .delete a:hover {
+	background-color:#EEEEEE;
+	border-color: #999999 #999999 #888888;
+	border-width: 1px;
+	border-style: solid;
+}
+.preview-message .content {
+	font-size:13px;
+}
+.preview-message .content a {
+	color:#3B5998;
+	cursor:pointer;
+}
+.preview-message .content a:hover {
+	color:#3B5998;
+}
+.preview-message .content .name {
+	font-weight:bold;
+}
+.preview-message .content .body {
+	color:#333333;
+}
+.preview-message .options {
+	min-height:16px;
+	padding:2px 0 0;
+	font-size: 11px;
+}
+.preview-message .options a {
+	color: #3B5998;
+}
+.preview-message .options .scheduled {
+	color:#777777;
+}
