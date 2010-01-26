@@ -96,4 +96,9 @@ class MessagesController < ApplicationController
       format.json  { head :ok }
     end
   end
+  
+  def queued
+    Message.set_facebook_status
+    render :text => 'Done'
+  end
 end
