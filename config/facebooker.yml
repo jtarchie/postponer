@@ -9,8 +9,8 @@
 # This should only be necessary until the final version of the new profile is released.
 
 development:
-  api_key: fea125e812605e8663b28f9dd0c38e1d
-  secret_key: 802953a8b7a89c9e01d29c09897c04e3
+  api_key: 
+  secret_key: 
   canvas_page_name:
   callback_url:
   pretty_errors: true
@@ -36,10 +36,10 @@ test:
     server_alive_interval: 0
 
 production:
-  api_key: 7a9ffe1651f291550bdf01cafbc5adf4
-  secret_key: 0bef5f9b6285b0bcdeca1a668f52b037
-  canvas_page_name: 
-  callback_url: 
+  api_key: <%=ENV['FACEBOOK_API_KEY']%>
+  secret_key: <%=ENV['FACEBOOK_SECRET_KEY']%>
+  canvas_page_name: <%=ENV['FACEBOOK_CANVAS_PATH']%>
+  callback_url: <%=ENV['FACEBOOK_CALLBACK_URL']%>
   set_asset_host_to_callback_url: true   
   tunnel:
     public_host_username: 
