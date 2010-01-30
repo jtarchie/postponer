@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(:version => 20100119055207) do
     t.datetime "updated_at"
   end
 
-  add_index "messages", ["scheduled_at"], :name => "index_messages_on_scheduled_at"
+  add_index "messages", ["scheduled_at_local"], :name => "index_messages_on_scheduled_at_local"
   add_index "messages", ["user_id"], :name => "index_messages_on_user_id"
 
   create_table "users", :force => true do |t|
