@@ -98,7 +98,7 @@ class MessagesController < ApplicationController
   end
   
   def queued
-    Message.set_facebook_status
+    Message.set_facebook_status(15.minutes.ago)
     render :text => 'Done'
   end
 end

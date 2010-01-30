@@ -8,10 +8,7 @@ class Message < ActiveRecord::Base
   
   def set_utc_offset
     if self.scheduled_at_changed? || self.timezone_changed?
-      old_timezone = Time.zone
-      Time.zone = self.timezone
-      self.scheduled_at_utc = Time.zone.parse(self.scheduled_at.to_s(:db))
-      Time.zone = old_timezone
+      self.scheduled_at_local = Time.parse(self.scheduled_at.to_s(:db)).in_time_zone(self.timezone)
     end
   end
   
@@ -20,8 +17,9 @@ class Message < ActiveRecord::Base
   end
   
   def self.set_facebook_status(time_ago = 5.minutes.ago, batch_limit = 50)
+    count = 0
     session = Facebooker::Session.new(Facebooker.facebooker_config['api_key'],Facebooker.facebooker_config['secret_key'])
-    Message.find_in_batches(:batch_size=>batch_limit, :conditions=>['? <= scheduled_at AND scheduled_at < ? AND delivered_by IS NULL', time_ago, Time.now.utc]) do |messages|
+    Message.find_in_batches(:batch_size=>batch_limit, :conditions=>['? <= scheduled_at_local AND scheduled_at_local < ? AND delivered_at IS NULL', time_ago, Time.now.utc]) do |messages|
       Facebooker::Service.with_async do
         messages.each do |m|
           user = Facebooker::User.new(m.user.facebook_id, session)
@@ -31,8 +29,10 @@ class Message < ActiveRecord::Base
             :uid => m.facebook_id
           })
         end
-        Message.update_all ['id IN ?', messages.map(&:id)], ['delivered_at = ?', Time.now]
+        Message.update_all({:id=>messages.map{|m|m.id}}, ['delivered_at = ?', Time.now])
+        count += messages.length
       end
     end
+    return count
   end
 end

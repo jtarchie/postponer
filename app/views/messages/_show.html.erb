@@ -19,7 +19,7 @@
     </div>
     <div class="options">
         <span class="scheduled">
-            <%=facebook_time_format(message.scheduled_at, Time.now, true)%>
+            <%=facebook_time_format(message.scheduled_at_local, Time.zone.now, true)%>
         </span>
         ·
         <%=link_to "Edit", {:action=>:edit, :id=>message.id}, :class=>'lightbox'%>

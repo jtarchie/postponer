@@ -1,6 +1,12 @@
 <script>
     $(document).ready(function() {
-        updatePageOptions($('#message_facebook_id'), <%=@user.facebook_id.to_json%>, <%=(!@message.new_record? ? @message.facebook_id : nil).to_json%>) ;
+        updatePageOptions($('#message_facebook_id'),
+            <%=@user.facebook_id.to_json%>,
+            <%=(!@message.new_record? ? @message.facebook_id : nil).to_json%>
+        );
+        $('#message_facebook_id').change(function() {
+           askForPermissionOnForm('publish_stream',$(this).attr('value')) 
+        });
     });
 </script>
 

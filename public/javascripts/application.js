@@ -35,6 +35,12 @@ function updatePageOptions(element, uid, select_id) {
 	});
 }
 
+function askForPermissionOnForm(permission, uid) {
+	safetyCallFB(function() {
+		FB.Connect.showPermissionDialog(permission, function(perms) {}, true, [uid]);
+	});
+}
+
 $(document).ready(function() {
 	$('a.lightbox').fancybox({
 			hideOnContentClick: false,

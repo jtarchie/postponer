@@ -15,9 +15,9 @@ ActiveRecord::Schema.define(:version => 20100119055207) do
     t.integer  "user_id"
     t.text     "body"
     t.datetime "scheduled_at"
-    t.datetime "scheduled_at_utc"
+    t.datetime "scheduled_at_local"
     t.string   "timezone"
-    t.integer  "facebook_id",      :limit => 8
+    t.integer  "facebook_id",        :limit => 8
     t.datetime "delivered_at"
     t.datetime "created_at"
     t.datetime "updated_at"
