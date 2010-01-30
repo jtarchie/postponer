@@ -98,7 +98,7 @@ class MessagesController < ApplicationController
   end
   
   def queued
-    Message.set_facebook_status(15.minutes.ago)
-    render :text => 'Done'
+    count = Message.set_facebook_status(15.minutes.ago)
+    render :text => "Sent total of #{count} message(s)"
   end
 end
