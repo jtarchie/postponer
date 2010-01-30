@@ -7,10 +7,10 @@ class Message < ActiveRecord::Base
   before_save :set_utc_offset
   
   def set_utc_offset
-    if self.scheduled_at_changed?
+    if self.scheduled_at_changed? || self.timezone_changed?
       old_timezone = Time.zone
       Time.zone = self.timezone
-      self.scheduled_at = Time.zone.parse(self.scheduled_at.to_s(:db))
+      self.scheduled_at_utc = Time.zone.parse(self.scheduled_at.to_s(:db))
       Time.zone = old_timezone
     end
   end

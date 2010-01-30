@@ -15,8 +15,9 @@ ActiveRecord::Schema.define(:version => 20100119055207) do
     t.integer  "user_id"
     t.text     "body"
     t.datetime "scheduled_at"
+    t.datetime "scheduled_at_utc"
     t.string   "timezone"
-    t.integer  "facebook_id"
+    t.integer  "facebook_id",      :limit => 8
     t.datetime "delivered_at"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -26,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20100119055207) do
   add_index "messages", ["user_id"], :name => "index_messages_on_user_id"
 
   create_table "users", :force => true do |t|
-    t.integer  "facebook_id"
+    t.integer  "facebook_id", :limit => 8
     t.datetime "created_at"
     t.datetime "updated_at"
   end

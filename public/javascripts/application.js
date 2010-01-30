@@ -13,14 +13,22 @@ function safetyCallFB(func) {
 /* Update the page select element with options of the pages the user
  has admin access to.
 */
-function updatePageOptions(element, uid) {
+function updatePageOptions(element, uid, select_id) {
 	safetyCallFB(function() {
 		FB.Facebook.apiClient.fql_query("SELECT page_id, name from page WHERE page_id IN (SELECT page_id FROM page_admin WHERE uid = " + uid + ")", function(results) {
 			var fields = $(element);
-			fields.html('<option value="'+uid+'">You</option>');
+			fields.html($('<option></option>').attr({
+				value: uid,
+				text: 'You',
+				selected: (select_id && uid==select_id) ? 'selected' : ''
+			}))
 			if (results) {
 				for(var i = 0; i < results.length; i++) {
-					fields.append('<option value="'+results[i].page_id+'">'+results[i].name+'</option>')
+					fields.append($('<option></option>').attr({
+						value: results[i].page_id,
+						text: results[i].name,
+						selected: (select_id && results[i].page_id.toString() == select_id) ? 'selected' : ''
+					}));
 				}
 			}
 		});

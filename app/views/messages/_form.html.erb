@@ -1,6 +1,6 @@
 <script>
     $(document).ready(function() {
-        updatePageOptions($('#message_facebook_id'), <%=@user.facebook_id.to_json%>) ;
+        updatePageOptions($('#message_facebook_id'), <%=@user.facebook_id.to_json%>, <%=(!@message.new_record? ? @message.facebook_id : nil).to_json%>) ;
     });
 </script>
 
@@ -12,7 +12,7 @@
 </p>
 <p>
   <%= f.label :scheduled_at, "" %>
-  <%= f.datetime_select(:scheduled_at, :start_year=>Time.now.year) %>
+  <%= f.datetime_select(:scheduled_at, :start_year => Time.now.year, :minute_step => 15) %>
 </p>
 <p>
   <%= f.label :timezone %>

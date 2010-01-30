@@ -1,7 +1,7 @@
 class CreateUsers < ActiveRecord::Migration
   def self.up
     create_table :users do |t|
-      t.integer :facebook_id, :limit => 11
+      t.integer :facebook_id, :limit => 8
       t.timestamps
     end
     

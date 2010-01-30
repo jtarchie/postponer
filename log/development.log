@@ -11305,3 +11305,551 @@ Processing MessagesController#index (for 127.0.0.1 at 2010-01-25 11:59:13) [GET]
 Rendering template within layouts/default
 Rendering messages/index
 Completed in 3255ms (View: 2549, DB: 683) | 200 OK [http://postponer.local/messages]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-01-25 12:08:18) [GET]
+  [4;36;1mUser Columns (56.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Load (0.4ms)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.user_id = 1) [0m
+Rendering template within layouts/default
+Rendering messages/index
+Completed in 1004ms (View: 691, DB: 58) | 200 OK [http://postponer.local/messages/]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-01-25 12:17:32) [GET]
+  [4;36;1mUser Columns (22.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Load (0.4ms)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.user_id = 1) [0m
+Rendering template within layouts/default
+Rendering messages/index
+Completed in 596ms (View: 294, DB: 24) | 200 OK [http://postponer.local/messages/]
+  [4;36;1mSQL (106.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (31.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-01-29 16:42:57) [GET]
+Redirected to http://postponer.local/account/login?next_url=%2Fmessages
+Filter chain halted as [:ensure_facebook_connect] rendered_or_redirected.
+Completed in 60ms (DB: 138) | 302 Found [http://postponer.local/messages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing AccountController#login (for 127.0.0.1 at 2010-01-29 16:42:59) [GET]
+  Parameters: {"next_url"=>"/messages"}
+Rendering template within layouts/default
+Rendering account/login
+Completed in 3075ms (View: 3072, DB: 0) | 200 OK [http://postponer.local/account/login?next_url=%2Fmessages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-01-29 16:43:57) [GET]
+  [4;36;1mUser Columns (318.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (59.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Load (1.9ms)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.user_id = 1) [0m
+Rendering template within layouts/default
+Rendering messages/index
+Completed in 759ms (View: 51, DB: 380) | 200 OK [http://postponer.local/messages]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-01-29 16:44:01) [GET]
+  [4;35;1mUser Columns (35.7ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;35;1mMessage Columns (8.3ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+Rendering messages/new
+Rendered messages/_form (347.3ms)
+Completed in 432ms (View: 373, DB: 45) | 200 OK [http://postponer.local/messages/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-01-29 16:44:07) [GET]
+  [4;36;1mUser Columns (114.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+Rendering messages/new
+Rendered messages/_form (17.0ms)
+Completed in 221ms (View: 21, DB: 117) | 200 OK [http://postponer.local/messages/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-01-29 16:53:07) [POST]
+  Parameters: {"authenticity_token"=>"xfM2mMW9Uj0F3qHeQlN6wgf6w/MEBqr92KIllGn17Xo=", "message"=>{"facebook_id"=>"154018416318", "scheduled_at(5i)"=>"44", "body"=>"asasdasd", "timezone"=>"Pacific Time (US & Canada)", "scheduled_at(1i)"=>"2010", "scheduled_at(2i)"=>"1", "scheduled_at(3i)"=>"30", "scheduled_at(4i)"=>"00"}}
+  [4;36;1mUser Columns (23.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (15.9ms)[0m   [0mBEGIN[0m
+  [4;36;1mMessage Create (44.7ms)[0m   [0;1mINSERT INTO `messages` (`facebook_id`, `created_at`, `body`, `updated_at`, `timezone`, `delivered_at`, `user_id`, `scheduled_at`) VALUES(154018416318, '2010-01-30 00:53:08', 'asasdasd', '2010-01-30 00:53:08', 'Pacific Time (US & Canada)', NULL, 1, '2010-01-30 00:44:00')[0m
+  [4;35;1mSQL (22.0ms)[0m   [0mCOMMIT[0m
+Rendering messages/create (created)
+Rendered messages/_show (18.5ms)
+Completed in 970ms (View: 72, DB: 109) | 201 Created [http://postponer.local/messages]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-01-29 16:53:12) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Columns (2.6ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mMessage Load (51.0ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.`id` = 1 AND (`messages`.user_id = 1)) [0m
+Rendering messages/edit
+Rendered messages/_form (30.7ms)
+Completed in 137ms (View: 60, DB: 57) | 200 OK [http://postponer.local/messages/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-01-29 16:55:44) [GET]
+  [4;36;1mUser Columns (26.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Load (0.6ms)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.user_id = 1) [0m
+Rendering template within layouts/default
+Rendering messages/index
+  [4;35;1mMessage Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+Rendered messages/_show (6.3ms)
+Completed in 85ms (View: 42, DB: 30) | 200 OK [http://postponer.local/messages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-01-29 16:55:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mMessage Load (1.3ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.`id` = 1 AND (`messages`.user_id = 1)) [0m
+Rendering messages/edit
+Rendered messages/_form (23.0ms)
+Completed in 51ms (View: 32, DB: 6) | 200 OK [http://postponer.local/messages/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-01-29 16:56:27) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (42.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mMessage Load (0.4ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.`id` = 1 AND (`messages`.user_id = 1)) [0m
+Rendering messages/edit
+Rendered messages/_form (17.6ms)
+Completed in 82ms (View: 22, DB: 46) | 200 OK [http://postponer.local/messages/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-01-29 16:56:49) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.5ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Columns (3.1ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mMessage Load (0.8ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.`id` = 1 AND (`messages`.user_id = 1)) [0m
+Rendering messages/edit
+Rendered messages/_form (21.9ms)
+Completed in 56ms (View: 34, DB: 8) | 200 OK [http://postponer.local/messages/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-01-29 17:03:31) [GET]
+  [4;36;1mUser Columns (27.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Load (0.5ms)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.user_id = 1) [0m
+Rendering template within layouts/default
+Rendering messages/index
+  [4;35;1mMessage Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+Rendered messages/_show (5.8ms)
+Completed in 118ms (View: 8, DB: 30) | 200 OK [http://postponer.local/messages]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-01-29 17:03:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (2.0ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mMessage Load (0.6ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.`id` = 1 AND (`messages`.user_id = 1)) [0m
+Rendering messages/edit
+Rendered messages/_form (45.3ms)
+Completed in 72ms (View: 51, DB: 7) | 200 OK [http://postponer.local/messages/1/edit]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-01-29 17:05:18) [GET]
+  [4;36;1mUser Columns (25.1ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Load (0.4ms)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.user_id = 1) [0m
+Rendering template within layouts/default
+Rendering messages/index
+  [4;35;1mMessage Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+Rendered messages/_show (6.0ms)
+Completed in 47ms (View: 9, DB: 28) | 200 OK [http://postponer.local/messages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-01-29 17:05:23) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (2.1ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Columns (4.2ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mMessage Load (0.5ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.`id` = 1 AND (`messages`.user_id = 1)) [0m
+Rendering messages/edit
+Rendered messages/_form (21.8ms)
+Completed in 48ms (View: 28, DB: 9) | 200 OK [http://postponer.local/messages/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (409.1ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (263.9ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100119050658)
+  [4;35;1mSQL (238.5ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `facebook_id` bigint, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (100.3ms)[0m   [0;1mCREATE INDEX `index_users_on_facebook_id` ON `users` (`facebook_id`)[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100119050658')[0m
+Migrating to CreateMessages (20100119055207)
+  [4;36;1mSQL (110.4ms)[0m   [0;1mCREATE TABLE `messages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `body` text, `scheduled_at` datetime, `timezone` varchar(255), `facebook_id` bigint, `delivered_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (105.5ms)[0m   [0mCREATE INDEX `index_messages_on_user_id` ON `messages` (`user_id`)[0m
+  [4;36;1mSQL (163.4ms)[0m   [0;1mCREATE INDEX `index_messages_on_scheduled_at` ON `messages` (`scheduled_at`)[0m
+  [4;35;1mSQL (22.2ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100119055207')[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (27.9ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (16.0ms)[0m   [0;1mdescribe `messages`[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSHOW KEYS FROM `messages`[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (1.2ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-01-29 17:11:01) [GET]
+  [4;36;1mUser Columns (1.6ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`facebook_id`, `created_at`, `updated_at`) VALUES(10603565, '2010-01-30 01:11:01', '2010-01-30 01:11:01')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mMessage Load (0.4ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 1) [0m
+Rendering template within layouts/default
+Rendering messages/index
+Completed in 653ms (View: 510, DB: 4) | 200 OK [http://postponer.local/messages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-01-29 17:11:05) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Columns (3.2ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+Rendering messages/new
+Rendered messages/_form (212.6ms)
+Completed in 272ms (View: 242, DB: 6) | 200 OK [http://postponer.local/messages/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-01-29 17:11:18) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;35;1mMessage Load (0.4ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 1) [0m
+Rendering template within layouts/default
+Rendering messages/index
+Completed in 16ms (View: 4, DB: 3) | 200 OK [http://postponer.local/messages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-01-29 17:11:27) [GET]
+  [4;36;1mUser Columns (6.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Columns (2.1ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+Rendering messages/new
+Rendered messages/_form (103.6ms)
+Completed in 138ms (View: 110, DB: 10) | 200 OK [http://postponer.local/messages/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-01-29 17:11:52) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;35;1mMessage Load (0.4ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 1) [0m
+Rendering template within layouts/default
+Rendering messages/index
+Completed in 16ms (View: 4, DB: 2) | 200 OK [http://postponer.local/messages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-01-29 17:11:56) [GET]
+  [4;36;1mUser Columns (29.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+Rendering messages/new
+Rendered messages/_form (16.0ms)
+Completed in 68ms (View: 20, DB: 33) | 200 OK [http://postponer.local/messages/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-01-29 17:12:09) [GET]
+  [4;35;1mUser Columns (1.2ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;35;1mMessage Load (0.4ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 1) [0m
+Rendering template within layouts/default
+Rendering messages/index
+Completed in 16ms (View: 4, DB: 2) | 200 OK [http://postponer.local/messages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-01-29 17:12:34) [GET]
+  [4;36;1mUser Columns (1.7ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+Rendering messages/new
+Rendered messages/_form (18.4ms)
+Completed in 49ms (View: 23, DB: 6) | 200 OK [http://postponer.local/messages/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-01-29 17:13:04) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;35;1mMessage Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+Rendering messages/new
+Rendered messages/_form (17.9ms)
+Completed in 115ms (View: 22, DB: 5) | 200 OK [http://postponer.local/messages/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-01-29 17:13:39) [GET]
+  [4;36;1mUser Columns (1.4ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Load (0.4ms)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.user_id = 1) [0m
+Rendering template within layouts/default
+Rendering messages/index
+Completed in 20ms (View: 6, DB: 4) | 200 OK [http://postponer.local/messages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-01-29 17:13:42) [GET]
+  [4;35;1mUser Columns (2.8ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (2.2ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;35;1mMessage Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+Rendering messages/new
+Rendered messages/_form (19.5ms)
+Completed in 47ms (View: 24, DB: 7) | 200 OK [http://postponer.local/messages/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-01-29 17:14:00) [GET]
+  [4;36;1mUser Columns (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.3ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Load (0.4ms)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.user_id = 1) [0m
+Rendering template within layouts/default
+Rendering messages/index
+Completed in 16ms (View: 4, DB: 2) | 200 OK [http://postponer.local/messages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-01-29 17:14:03) [GET]
+  [4;35;1mUser Columns (1.9ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (3.3ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;35;1mMessage Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+Rendering messages/new
+Rendered messages/_form (93.1ms)
+Completed in 119ms (View: 98, DB: 7) | 200 OK [http://postponer.local/messages/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-01-29 17:14:10) [POST]
+  Parameters: {"authenticity_token"=>"xfM2mMW9Uj0F3qHeQlN6wgf6w/MEBqr92KIllGn17Xo=", "message"=>{"facebook_id"=>"154018416318", "scheduled_at(5i)"=>"14", "body"=>"sdfasdf", "timezone"=>"Pacific Time (US & Canada)", "scheduled_at(1i)"=>"2010", "scheduled_at(2i)"=>"1", "scheduled_at(3i)"=>"30", "scheduled_at(4i)"=>"01"}}
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Columns (1.9ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mMessage Create (0.3ms)[0m   [0;1mINSERT INTO `messages` (`facebook_id`, `created_at`, `body`, `updated_at`, `timezone`, `delivered_at`, `user_id`, `scheduled_at`) VALUES(154018416318, '2010-01-30 01:14:10', 'sdfasdf', '2010-01-30 01:14:10', 'Pacific Time (US & Canada)', NULL, 1, '2010-01-30 01:14:00')[0m
+  [4;35;1mSQL (59.4ms)[0m   [0mCOMMIT[0m
+Rendering messages/create (created)
+Rendered messages/_show (3.9ms)
+Completed in 119ms (View: 36, DB: 64) | 201 Created [http://postponer.local/messages]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-01-29 17:14:20) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mUser Columns (2.9ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Columns (2.3ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mMessage Load (0.4ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.`id` = 1 AND (`messages`.user_id = 1)) [0m
+Rendering messages/edit
+Rendered messages/_form (18.4ms)
+Completed in 54ms (View: 29, DB: 7) | 200 OK [http://postponer.local/messages/1/edit]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#destroy (for 127.0.0.1 at 2010-01-29 17:23:59) [DELETE]
+  Parameters: {"authenticity_token"=>"xfM2mMW9Uj0F3qHeQlN6wgf6w/MEBqr92KIllGn17Xo=", "id"=>"1"}
+  [4;36;1mUser Columns (31.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Columns (5.9ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+  [4;35;1mMessage Load (5.3ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.`id` = 1 AND (`messages`.user_id = 1)) [0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMessage Destroy (24.8ms)[0m   [0mDELETE FROM `messages` WHERE `id` = 1[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+Completed in 222ms (View: 5, DB: 72) | 200 OK [http://postponer.local/messages/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-01-29 17:24:33) [GET]
+  [4;35;1mUser Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;35;1mMessage Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+Rendering messages/new
+Rendered messages/_form (213.0ms)
+Completed in 271ms (View: 253, DB: 4) | 200 OK [http://postponer.local/messages/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (191.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [4;36;1mSQL (233.4ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSHOW TABLES[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100119050658)
+  [4;35;1mSQL (131.1ms)[0m   [0mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `facebook_id` bigint, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;36;1mSQL (171.4ms)[0m   [0;1mCREATE INDEX `index_users_on_facebook_id` ON `users` (`facebook_id`)[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100119050658')[0m
+Migrating to CreateMessages (20100119055207)
+  [4;36;1mSQL (118.6ms)[0m   [0;1mCREATE TABLE `messages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `user_id` int(11), `body` text, `scheduled_at` datetime, `scheduled_at_utc` datetime, `timezone` varchar(255), `facebook_id` bigint, `delivered_at` datetime, `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB[0m
+  [4;35;1mSQL (123.0ms)[0m   [0mCREATE INDEX `index_messages_on_user_id` ON `messages` (`user_id`)[0m
+  [4;36;1mSQL (122.3ms)[0m   [0;1mCREATE INDEX `index_messages_on_scheduled_at` ON `messages` (`scheduled_at`)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100119055207')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mdescribe `messages`[0m
+  [4;35;1mSQL (1.9ms)[0m   [0mSHOW KEYS FROM `messages`[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mdescribe `users`[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSHOW KEYS FROM `users`[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-01-29 17:25:01) [GET]
+  [4;36;1mUser Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mUser Create (0.3ms)[0m   [0mINSERT INTO `users` (`facebook_id`, `created_at`, `updated_at`) VALUES(10603565, '2010-01-30 01:25:01', '2010-01-30 01:25:01')[0m
+  [4;36;1mSQL (0.8ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mMessage Load (1.2ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 1) [0m
+Rendering template within layouts/default
+Rendering messages/index
+Completed in 79ms (View: 56, DB: 6) | 200 OK [http://postponer.local/messages]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET NAMES 'utf8'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#new (for 127.0.0.1 at 2010-01-29 17:25:06) [GET]
+  [4;36;1mUser Columns (1.5ms)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (1.4ms)[0m   [0mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;36;1mMessage Columns (3.3ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+Rendering messages/new
+Rendered messages/_form (102.7ms)
+Completed in 142ms (View: 107, DB: 6) | 200 OK [http://postponer.local/messages/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#create (for 127.0.0.1 at 2010-01-29 17:25:23) [POST]
+  Parameters: {"authenticity_token"=>"xfM2mMW9Uj0F3qHeQlN6wgf6w/MEBqr92KIllGn17Xo=", "message"=>{"facebook_id"=>"154018416318", "scheduled_at(5i)"=>"28", "body"=>"sdfsdf", "timezone"=>"Pacific Time (US & Canada)", "scheduled_at(1i)"=>"2010", "scheduled_at(2i)"=>"1", "scheduled_at(3i)"=>"30", "scheduled_at(4i)"=>"04"}}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;35;1mMessage Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mMessage Create (0.4ms)[0m   [0mINSERT INTO `messages` (`facebook_id`, `created_at`, `body`, `updated_at`, `timezone`, `delivered_at`, `user_id`, `scheduled_at`, `scheduled_at_utc`) VALUES(154018416318, '2010-01-30 01:25:23', 'sdfsdf', '2010-01-30 01:25:23', 'Pacific Time (US & Canada)', NULL, 1, '2010-01-30 04:28:00', '2010-01-30 12:28:00')[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mCOMMIT[0m
+Rendering messages/create (created)
+Rendered messages/_show (3.9ms)
+Completed in 103ms (View: 41, DB: 5) | 201 Created [http://postponer.local/messages]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-01-29 17:25:32) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (11.4ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (1.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;35;1mMessage Columns (1.6ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mMessage Load (1.7ms)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.`id` = 1 AND (`messages`.user_id = 1)) [0m
+Rendering messages/edit
+Rendered messages/_form (26.7ms)
+Completed in 72ms (View: 36, DB: 16) | 200 OK [http://postponer.local/messages/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#index (for 127.0.0.1 at 2010-01-29 17:26:53) [GET]
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;35;1mMessage Load (0.4ms)[0m   [0mSELECT * FROM `messages` WHERE (`messages`.user_id = 1) [0m
+Rendering template within layouts/default
+Rendering messages/index
+  [4;36;1mMessage Columns (1.8ms)[0m   [0;1mSHOW FIELDS FROM `messages`[0m
+Rendered messages/_show (6.3ms)
+Completed in 22ms (View: 8, DB: 4) | 200 OK [http://postponer.local/messages]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#edit (for 127.0.0.1 at 2010-01-29 17:26:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;35;1mMessage Columns (1.5ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mMessage Load (0.5ms)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.`id` = 1 AND (`messages`.user_id = 1)) [0m
+Rendering messages/edit
+Rendered messages/_form (17.3ms)
+Completed in 131ms (View: 25, DB: 4) | 200 OK [http://postponer.local/messages/1/edit]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET NAMES 'utf8'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+
+
+Processing MessagesController#update (for 127.0.0.1 at 2010-01-29 17:27:42) [PUT]
+  Parameters: {"authenticity_token"=>"xfM2mMW9Uj0F3qHeQlN6wgf6w/MEBqr92KIllGn17Xo=", "id"=>"1", "message"=>{"facebook_id"=>"154018416318", "scheduled_at(5i)"=>"00", "body"=>"sdfsdf", "timezone"=>"Hawaii", "scheduled_at(1i)"=>"2010", "scheduled_at(2i)"=>"1", "scheduled_at(3i)"=>"30", "scheduled_at(4i)"=>"16"}}
+  [4;35;1mUser Columns (1.3ms)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`facebook_id` = 10603565) LIMIT 1[0m
+  [4;35;1mMessage Columns (1.4ms)[0m   [0mSHOW FIELDS FROM `messages`[0m
+  [4;36;1mMessage Load (0.7ms)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.`id` = 1 AND (`messages`.user_id = 1)) [0m
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mMessage Update (22.8ms)[0m   [0;1mUPDATE `messages` SET `updated_at` = '2010-01-30 01:27:42', `scheduled_at_utc` = '2010-01-31 02:00:00', `scheduled_at` = '2010-01-30 16:00:00', `timezone` = 'Hawaii' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mCOMMIT[0m
+Rendering messages/update (created)
+Rendered messages/_show (2.3ms)
+Completed in 106ms (View: 23, DB: 28) | 201 Created [http://postponer.local/messages/1]

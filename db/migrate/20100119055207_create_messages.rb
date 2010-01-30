@@ -4,8 +4,9 @@ class CreateMessages < ActiveRecord::Migration
       t.belongs_to  :user
       t.text        :body
       t.datetime    :scheduled_at
+      t.datetime    :scheduled_at_utc
       t.string      :timezone
-      t.integer     :facebook_id, :limit => 11
+      t.integer     :facebook_id, :limit => 8
       t.datetime    :delivered_at
       t.timestamps
     end
