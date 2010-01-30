@@ -29,7 +29,7 @@ class Message < ActiveRecord::Base
             :uid => m.facebook_id
           })
         end
-        Message.update_all(['delivered_at = ?', Time.now], {:id=>messages.map{|m|m.id}})
+        Message.update_all(['delivered_at = ?', Time.zone.now], {:id=>messages.map{|m|m.id}})
         count += messages.length
       end
     end
