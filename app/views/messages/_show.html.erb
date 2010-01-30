@@ -19,7 +19,11 @@
     </div>
     <div class="options">
         <span class="scheduled">
-            <% unless message.delivered_at.blank?%>&#9745;<%else%>&#9744;<%end%>
+            <% unless message.delivered_at.blank?%>
+                <span title="Delivered!">&#9745;</span>
+            <%else%>
+                <span title="Not delivered yet.">&#9744;</span>
+            <%end%>
             <%=facebook_time_format(message.scheduled_at_local, Time.zone.now, true)%>
         </span>
         · <%=link_to "Edit", {:action=>:edit, :id=>message.id}, :class=>'lightbox'%>
