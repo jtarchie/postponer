@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   layout "default"
-  before_filter :ensure_facebook_connect
+  before_filter :ensure_facebook_connect, :except => [:queued]
+  before_filter :http_authenticate, :only => [:queued]
   
   # GET /messages
   # GET /messages.xml
@@ -101,4 +102,11 @@ class MessagesController < ApplicationController
     count = Message.set_facebook_status(15.minutes.ago)
     render :text => "Sent total of #{count} message(s)"
   end
+  
+  private
+    def http_authenticate
+      authenticate_or_request_with_http_basic do |user_name, password|
+        user_name == HTTP_USERNAME && password == HTTP_PASSWORD
+      end
+    end
 end
