@@ -31,6 +31,7 @@ class Message < ActiveRecord::Base
           user.publish_to(user, {
             :post_as_page => true,
             :message => m.message,
+            :attachment => m.body.to_hash,
             :uid => m.facebook_id
           })
         end

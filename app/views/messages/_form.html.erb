@@ -37,7 +37,7 @@
     <div class="loader"><%=image_tag("small_loader.gif")%></div>
     <div class="attachment">
         <div class="thumbnail">
-            <%if @message.media && @message.media[0][:src].blank?%><%=image_tag(@message.media[0][:src],:style=>'display:block')%><%end%>
+            <%if !@message.media.blank? && !@message.media[0][:src].blank?%><%=image_tag(@message.media[0][:src],:style=>'display:block')%><%end%>
         </div>
         <div class="content">
             <div class="name"><%=@message.name%></div>
