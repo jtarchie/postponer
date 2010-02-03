@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
   # GET /messages
   # GET /messages.xml
   def index
-    @messages = @user.messages.all
+    @messages = @user.messages.find(:all, :order=>'id desc')
 
     respond_to do |format|
       format.html # index.html.erb

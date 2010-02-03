@@ -1,4 +1,9 @@
 class Message < ActiveRecord::Base
+  typed_serialize :body, Body::Facebook
+  Body::Facebook.members.each do |d|
+    delegate "#{d}", "#{d}=", :to => :body
+  end
+  
   belongs_to :user
   
   validates_presence_of :body, :scheduled_at, :facebook_id
@@ -25,7 +30,7 @@ class Message < ActiveRecord::Base
           user = Facebooker::User.new(m.user.facebook_id, session)
           user.publish_to(user, {
             :post_as_page => true,
-            :message => m.body,
+            :message => m.message,
             :uid => m.facebook_id
           })
         end

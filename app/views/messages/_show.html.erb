@@ -14,9 +14,20 @@
             <fb:name uid="<%=message.facebook_id%>" useyou="false" ifcantsee="Facebook User"></fb:name>
         </span>
         <span class="body">
-            <%=h(message.body)%>
+            <%=h(message.message)%>
         </span>
     </div>
+    <% unless message.href.blank? %>
+    <div class="attachment">
+        <div class="thumbnail"><%=link_to(image_tag(message.media[0][:src]), message.href, :target=>'_blank') unless message.media[0][:src].empty?%></div>
+        <div class="info">
+            <div class="name"><%=link_to message.name, message.href, :target=>'_blank'%></div>
+            <div class="href"><%=message.href%></div>
+            <div class="description"><%=message.description%></div>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+    <% end %>
     <div class="options">
         <span class="scheduled">
             <% unless message.delivered_at.blank?%>
@@ -27,7 +38,8 @@
             <%=facebook_time_format(message.scheduled_at_local, Time.zone.now, true)%>
         </span>
         · <%=link_to "Edit", {:action=>:edit, :id=>message.id}, :class=>'lightbox'%>
-        · <%=link_to_function "Now", "FB.Connect.streamPublish(#{message.body.to_json},{}, null, null, '', null, false, #{message.facebook_id.to_json});"%>
+        · <%=link_to_function "Now", "FB.Connect.streamPublish(#{message.body.message.to_json},#{message.body.to_hash.to_json}, null, null, '', null, false, #{message.facebook_id.to_json});"%>
     </div>
+    
 </div>
     

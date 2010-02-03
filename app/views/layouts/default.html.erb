@@ -4,14 +4,14 @@
 	<%= google_jquery(:version => '1.4.0') %>
 	<%= google_jqueryui(:version => '1.7.2') %>
 	<%= stylesheet_link_tag("application","/javascripts/fancybox/jquery.fancybox-1.2.6.css")%>
-	<%= javascript_include_tag("application", "jrails", "fancybox/jquery.fancybox-1.2.6.pack.js") %>
+	<%= javascript_include_tag("application", "jrails","fancybox/jquery.fancybox-1.2.6.pack.js") %>
 </head>
 <body>
 	<%= fb_connect_javascript_tag() %>
 	<div id="window">
         <div id="header">
             <div id="header_content">
-                <div class="title">post<span class="grey">poner</span></div>
+                <div class="title"><%=link_to 'post<span class="grey">poner</span>', :controller=>:messages, :action=>:index%></div>
                 <div class="slogan">just let us post it later</div>
             </div>
         </div>

@@ -67,6 +67,11 @@ input[type="submit"] {
 	left: 0;
 }
 
+#header_content .title a{
+	text-decoration:none;
+	color: #fff;
+}
+
 #header_content .slogan{
 	margin: 0;
 	position: absolute;
@@ -83,6 +88,7 @@ input[type="submit"] {
 
 /* facebook preview of a message */
 .preview-message {
+	font-size: 11px;
 	display: block;
 	width: 480px;
 	margin-bottom: 7px;
@@ -151,4 +157,108 @@ input[type="submit"] {
 }
 .preview-message .options .scheduled {
 	color:#777777;
+}
+.preview-message .attachment {
+	clear:both;
+	padding-top: 5px;
+}
+.preview-message .attachment a {
+	color:#3B5998;
+	cursor:pointer;
+	text-decoration:none;
+}
+.preview-message .attachment a:hover {
+	text-decoration:underline;
+}
+.preview-message .attachment .thumbnail {
+	float: left;
+	overflow: hidden;
+	padding-right: 10px;
+	height: 100px;
+}
+.preview-message .attachment .thumbnail img {
+	width: 90px;
+	border: none;
+}
+.preview-message .info {
+	float: left;
+	width: 73%;
+}
+.preview-message .name {
+	font-weight: bold;
+}
+.preview-message .href {
+	color:#808080;
+	padding-top:3px;
+}
+.preview-message .description {
+	color:#808080;
+	padding-top:3px;
+}
+
+/* facebook link preview */
+.link_preview {
+	border:1px solid #E8E8E8;
+	background-color: #fff;
+	overflow:hidden;
+	padding:3px 4px 4px;
+	width:520px;
+	height:176px;
+	font-family:"lucida grande",tahoma,verdana,arial,sans-serif;
+	font-size:11px;
+}
+.link_preview .header {
+	border-bottom:1px solid #DFDFDF;
+	line-height:18px;
+	overflow:hidden;
+	padding-bottom:4px;
+	color:#666666;
+	font-weight:bold;
+}
+.link_preview .close {
+	float: right;
+}
+.link_preview a {
+	text-decoration: none;
+}
+.link_preview a:hover {
+	color: #000;
+}
+.link_preview .loader {
+	padding:32px 0;
+	text-align:center;
+	display: none;
+}
+.link_preview .attachment {
+	padding: 9px;
+}
+.link_preview .thumbnail {
+	float:left;
+	padding:0 12px 12px 0;
+	max-width:100px;
+}
+.link_preview .thumbnail img{
+	width: 100px;
+	display: none;
+}
+.link_preview .content {
+	float: left;
+	width: 73%;
+}
+.link_preview .name {
+	color:#000000;
+	font-size:12px;
+	font-weight:bold;
+}
+.link_preview .caption {
+	color:#666666;
+	font-size:11px;
+	font-weight:normal;
+}
+.link_preview .description {
+	margin-top:6px;
+	padding:0;
+}
+.link_preview .options {
+	margin-top:6px;
 }

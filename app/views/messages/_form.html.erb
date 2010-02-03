@@ -5,17 +5,54 @@
             <%=(!@message.new_record? ? @message.facebook_id : nil).to_json%>
         );
         $('#message_facebook_id').change(function() {
-           askForPermissionOnForm('publish_stream',$(this).attr('value')) 
+            askForPermissionOnForm('publish_stream',$(this).attr('value')) 
         });
+        $('#message_href').delayedObserver(0.75, function(element, value) {
+            var url = hasURL(value);
+            if (url) {
+                displayLinkPreview(url);
+            } else {
+                $('#link_preview').effect('blind');
+            }
+        });
+        
     });
 </script>
 
 <%= f.error_messages %>
 
 <p>
-  <%= f.label :body %>
-  <%= f.text_area :body %>
+  <%= f.label 'message' %>
+  <%= f.text_area 'message' %>
 </p>
+<p>
+  <%= f.label 'href', 'Link'%>
+  <%= f.text_field 'href'%>
+</p>
+<div id="link_preview" style="<%=@message.href.blank? ? 'display:none' : ''%>" class="link_preview">
+    <div class="header">
+        Link
+        <%=link_to_function "remove", "$('#message_href').attr('value','');$('#link_preview').effect('blind');", :class=>"close"%>
+    </div>
+    <div class="loader"><%=image_tag("small_loader.gif")%></div>
+    <div class="attachment">
+        <div class="thumbnail">
+            <%unless @message.media[0][:src].blank?%><%=image_tag(@message.media[0][:src],:style=>'display:block')%><%end%>
+        </div>
+        <div class="content">
+            <div class="name"><%=@message.name%></div>
+            <div class="caption"><%=@message.href%></div>
+            <div class="description"><%=@message.description%></div>
+            <div class="options">
+                <%=link_to_function '&#9664;', 'slideThumbnailLeft()'%>
+                <%=link_to_function '&#9654;', 'slideThumbnailRight()'%>
+                select thumbnails<br>
+                <input type="checkbox" onclick="$('#link_preview .thumbnail').toggle();" id="preview_thumbnail" value="1">No Thumbnail
+            </div>
+        </div>
+    </div>
+    <div style="clear:both"></div>
+</div>
 <p>
   <%= f.label :scheduled_at, "" %>
   <%= f.datetime_select(:scheduled_at, :start_year => Time.now.year, :minute_step => 15) %>
