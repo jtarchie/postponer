@@ -37,7 +37,7 @@
             <%end%>
             <%=facebook_time_format(message.scheduled_at_local, Time.zone.now, true)%>
         </span>
-        · <%=link_to "Edit", {:action=>:edit, :id=>message.id}, :class=>'lightbox'%>
+        <% if message.delivered_at.blank?%>· <%=link_to "Edit", {:action=>:edit, :id=>message.id}, :class=>'lightbox'%><%end%>
         · <%=link_to_function "Now", "FB.Connect.streamPublish(#{message.body.message.to_json},#{message.body.to_hash.to_json}, null, null, '', null, false, #{message.facebook_id.to_json});"%>
     </div>
     
