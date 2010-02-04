@@ -10,7 +10,7 @@ class Body::Facebook < Struct.new(:message, :href, :media, :name, :description, 
           :href => self.href
         }]
       else
-        self['media'] = ''
+        self['media'] = {}
       end
     end
   end
